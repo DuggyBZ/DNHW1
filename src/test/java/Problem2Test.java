@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 public class Problem2Test {
 
     @Test
-    //Asked an ai to make some test cases, to guarantee correctness in checks.
-    //The method checks if a sorting method arranges numbers from smallest to largest correctly.
+    //Asked an ai to make some testcases, to guarantee correctness in checks.
+    //Proof of understanding: The method checks if a sorting method arranges numbers from smallest to largest correctly.
     public void testBubbleSort() {
         int[][] inputs = {
                 {2, 1, 0},
@@ -22,7 +22,6 @@ public class Problem2Test {
                 {},
                 {9},
         };
-
 
         assertEquals(inputs.length, expects.length);
 

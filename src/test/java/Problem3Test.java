@@ -12,7 +12,9 @@ public class Problem3Test {
     // Okay to change the content of this function
     // DO NOT REMOVE OR CHANGE the signature
     @Test
-    //Asked an ai to make some test cases, to guarantee correctness in checks. I wrote the discription of what each test case is, to prove i understand.
+    //Asked an ai to make some test cases, to guarantee correctness in checks.
+    // I wrote the discription of what each test case is, to prove i understand, but overall
+    // The testcase verifies that the method correctly sums up repeated numbers in the arrays.
     public void testSumOfNonUnique() {
         assertEquals(0, Problem3.sumOfNonUnique(new int[]{})); // test with an Empty array
         assertEquals(0, Problem3.sumOfNonUnique(new int[]{1})); // This test has a Single element
