@@ -196,9 +196,7 @@ public class Problem4Test {
                 // average stock market return (see shorturl.at/aHJT6)
                 add(new TestCase(1000, 300, 35, 10,
                         127000, 1003790.16f));
-                /*
-                TODO: add your ways of making a million dollar using compounding interest
-                 */
+                //My test cases wouldn't work, i tried to use the compound interest calculator, but my test cases wouldn't run unfortunatkley
             }
         };
 

@@ -1,6 +1,6 @@
 import org.junit.Test;
-
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 public class Problem2Test {
 
@@ -8,25 +8,31 @@ public class Problem2Test {
     public void testBubbleSort() {
         int[][] inputs = {
                 {3, 2, 1},
-                // TODO: add more test case inputs
+                {5, 4, 3, 2, 1},  // A reverse-sorted array
+                {1, 2, 3, 4, 5},  // An already sorted array
+                {},               // An empty array
+                {7},              // A single-element array
+                // Add more test cases if necessary
         };
         int[][] expects = {
                 {1, 2, 3},
-                // TODO: add more test case expected sorted results
+                {1, 2, 3, 4, 5},
+                {1, 2, 3, 4, 5},
+                {},
+                {7},
+                // Corresponding expected results for additional test cases
         };
 
-        // TODO: add a check to verify inputs and expects have the same amount of arrays
+        // Check if inputs and expects have the same number of arrays
+        assertEquals("Number of test cases in inputs and expects should match", inputs.length, expects.length);
 
         for (int i = 0; i < inputs.length; i++) {
-            // TODO: add a call to your bubble sort function here
+            // Call to your bubble sort function
+            Problem2.bubbleSort(inputs[i]);
 
-            for (int j = 0; j < inputs[i].length; j++) {
-
-                // this checks whether the actual result matches the expects result
-                // note the use of assertArrayEquals instead of assertEquals here
-                // less code == less chance of mistake
-                assertArrayEquals(expects[i], inputs[i]);
-            }
+            // Check whether the actual result matches the expected result
+            assertArrayEquals("Mismatch in sorted array for test case " + i, expects[i], inputs[i]);
         }
     }
 }
+

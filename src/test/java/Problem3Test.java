@@ -13,9 +13,13 @@ public class Problem3Test {
     // DO NOT REMOVE OR CHANGE the signature
     @Test
     public void testSumOfNonUnique() {
-        assertTrue(false); // TODO: Place-holder. Replace with your tests.
+        assertEquals(0, Problem3.sumOfNonUnique(new int[]{})); // Empty array
+        assertEquals(0, Problem3.sumOfNonUnique(new int[]{1})); // Single element
+        assertEquals(0, Problem3.sumOfNonUnique(new int[]{1, 2, 3})); // No duplicates
+        assertEquals(4, Problem3.sumOfNonUnique(new int[]{2, 2})); // All elements are duplicates
+        assertEquals(4, Problem3.sumOfNonUnique(new int[]{1, 2, 2, 5})); //some elements are duplicates
+        assertEquals(16, Problem3.sumOfNonUnique(new int[]{2, 4, 2, 1, 4, 4})); // Multiple duplicates
     }
-
     @Test
     public void largeArrayTest() {
         final int aLargeNumber = 100000;
@@ -29,7 +33,7 @@ public class Problem3Test {
 
         long startTime = System.nanoTime();
 
-        long actual = Problem3.SumOfNonUnique(input);
+        long actual = Problem3.sumOfNonUnique(input);
 
         long endTime = System.nanoTime();
         long durationInNano = endTime - startTime;
