@@ -2,10 +2,26 @@ public class Problem1 {
 
     // Do not change signature (function name, parameter variable type and return type)
     public static int binarySearch(int[] data, int target) {
-        // TODO: Add your solution
-        return -1; // Placeholder. TODO: Replace this line with your own code.
-    }
-    // TODO: answers "how would you prove your code is correct?". "ChatGPT says so" doesn't count as a good answer.
+        int first = 0;
+        int last = data.length - 1;
 
-    // TODO: remove all the comment of "TODOs" and "Placeholder" once the homework is done. In other files too.
+        while (first <= last) {
+            int middle = (first + last) / 2;
+
+            if (data[middle] == target) {
+                return middle;
+            }
+            if (data[middle] < target) {
+                first = middle + 1;
+            } else {
+                last = middle - 1;
+            }
+        }
+
+        return -1;
+    }
+
+    // TODO:
+    //  My binary search code looks for a number in a list by repeatedly splitting the list in half until it finds the number (or it runs out of values to check.
+
 }

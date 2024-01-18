@@ -25,6 +25,11 @@ public class Problem4Test {
         // Or "private"?
         // Or "protected"?
         // What's "protected" anyway?
+
+        // I believe that this is private. I was tempted to say public, but i realize now that the public decleration is for the test case
+        // and not for the mentioned variables. And in 142, we learned that this meant it defaults to private.
+
+        //Protected in this instance means that the variable is accessed by its class and/or subclass within the same realm.
         final float initDeposit;
         final float monthlyContribution;
         final int lengthInYear;
@@ -35,7 +40,7 @@ public class Problem4Test {
         public TestCase(float initDeposit, float monthlyContribution,
                         int lengthInYear, float interestRate,
                         float expectInvested, float expectAccumulated) {
-            this.initDeposit = initDeposit;     // why do we need "this" here?
+            this.initDeposit = initDeposit;     // why do we need "this" here? (It tells the code that this is the obejcts variable, not to be mistaken for another piece of data)
             this.monthlyContribution = monthlyContribution;
             this.lengthInYear = lengthInYear;
             this.interestRate = interestRate;
@@ -196,9 +201,7 @@ public class Problem4Test {
                 // average stock market return (see shorturl.at/aHJT6)
                 add(new TestCase(1000, 300, 35, 10,
                         127000, 1003790.16f));
-                /*
-                TODO: add your ways of making a million dollar using compounding interest
-                 */
+                //My test cases wouldn't work, i tried to use the compound interest calculator to try and help, but my test cases wouldn't run unfortunatkley
             }
         };
 
@@ -216,4 +219,9 @@ public class Problem4Test {
 
 /*
     TODO: Bonus Points. Add your answer here.
+     /*
+ * TODO:
+ * Using compound interest wisely, I can grow my savings. If I save a little money regularly in an account that earns more interest,
+  it will add up more over time. This way, my savings will increase not just from what I put in, but also from the extra money those
+  savings earn. This can help me have more money in the future for big things like a house or retirement.
  */

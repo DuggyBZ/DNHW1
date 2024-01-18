@@ -1,32 +1,35 @@
 import org.junit.Test;
-
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 public class Problem2Test {
 
     @Test
+    //Asked an ai to make some testcases, to guarantee correctness in checks.
+    //Proof of understanding: The method checks if a sorting method arranges numbers from smallest to largest correctly.
     public void testBubbleSort() {
         int[][] inputs = {
-                {3, 2, 1},
-                // TODO: add more test case inputs
+                {2, 1, 0},
+                {4, 3, 2, 1},
+                {2, 3, 4, 5},
+                {},
+                {9},
         };
         int[][] expects = {
-                {1, 2, 3},
-                // TODO: add more test case expected sorted results
+                {0, 1, 2},
+                {1, 2, 3, 4},
+                {2, 3, 4, 5},
+                {},
+                {9},
         };
 
-        // TODO: add a check to verify inputs and expects have the same amount of arrays
+        assertEquals(inputs.length, expects.length);
 
         for (int i = 0; i < inputs.length; i++) {
-            // TODO: add a call to your bubble sort function here
-
-            for (int j = 0; j < inputs[i].length; j++) {
-
-                // this checks whether the actual result matches the expects result
-                // note the use of assertArrayEquals instead of assertEquals here
-                // less code == less chance of mistake
-                assertArrayEquals(expects[i], inputs[i]);
-            }
+            // Call to bubble sort function
+            Problem2.bubbleSort(inputs[i]);
+            assertArrayEquals(expects[i], inputs[i]);
         }
     }
 }
+
