@@ -5,33 +5,31 @@ import static org.junit.Assert.assertEquals;
 public class Problem2Test {
 
     @Test
+    //Asked an ai to make some test cases, to guarantee correctness in checks.
+    //The method checks if a sorting method arranges numbers from smallest to largest correctly.
     public void testBubbleSort() {
         int[][] inputs = {
-                {3, 2, 1},
-                {5, 4, 3, 2, 1},  // A reverse-sorted array
-                {1, 2, 3, 4, 5},  // An already sorted array
-                {},               // An empty array
-                {7},              // A single-element array
-                // Add more test cases if necessary
+                {2, 1, 0},
+                {4, 3, 2, 1},
+                {2, 3, 4, 5},
+                {},
+                {9},
         };
         int[][] expects = {
-                {1, 2, 3},
-                {1, 2, 3, 4, 5},
-                {1, 2, 3, 4, 5},
+                {0, 1, 2},
+                {1, 2, 3, 4},
+                {2, 3, 4, 5},
                 {},
-                {7},
-                // Corresponding expected results for additional test cases
+                {9},
         };
 
-        // Check if inputs and expects have the same number of arrays
-        assertEquals("Number of test cases in inputs and expects should match", inputs.length, expects.length);
+
+        assertEquals(inputs.length, expects.length);
 
         for (int i = 0; i < inputs.length; i++) {
-            // Call to your bubble sort function
+            // Call to bubble sort function
             Problem2.bubbleSort(inputs[i]);
-
-            // Check whether the actual result matches the expected result
-            assertArrayEquals("Mismatch in sorted array for test case " + i, expects[i], inputs[i]);
+            assertArrayEquals(expects[i], inputs[i]);
         }
     }
 }

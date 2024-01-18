@@ -38,7 +38,7 @@ public class Problem1Test {
 
             // Assert ("verify") the actual result matches the expected correct result.
             // Test passes if they match. Test fails otherwise.
-            // Food for thoughts: if the test fails, what does it mean to us to do?
+            // Food for thoughts: if the test fails, what does it mean to us to do? (We should look at what failed and try to debug the code and match it to the desired result)
             // Note that in assertEquals statement like this, the expected value should appear BEFORE the actual value
             assertEquals("case " + i, expected, actual);
         }
